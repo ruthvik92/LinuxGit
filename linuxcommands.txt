@@ -1,0 +1,39 @@
+To see if HT is enabled: 
+dmidecode -t processor | grep -E '(Core Count|Thread Count)' OR lscpu #look for Thread(s) per core
+##################################################################################################
+To copy files from remote to local:
+scp 132.178.128.229:/home/ruthvik/Desktop/Fullyconnected_Results/default_models/200kImgs/200kweights.eps /home/ruthvik/Desktop
+##################################################################################################
+To copy from local to remote:
+scp /home/ruthvik/Desktop/Focol_Results/Serial_15000_imgs_progress_test_man_12hrs_OFF_roundoff/filters.eps 132.178.128.229:/home/ruthvik/Desktop
+##################################################################################################
+To connect to remote with username:
+ssh rv0424@bridges.psc.edu -p 2222
+    "user"@"remote address" -p "port"
+##################################################################################################
+To connect to VPN:
+sudo openconnect bsuvpn-offcampus.boisestate.edu
+		 " V P N A d d r e s s"
+##################################################################################################
+To run PyNN, Neuron, MPI codes use:
+mpirun -np 4 ~/neuron/nrn/src/nrniv/nrniv -mpi PySCNN_v22.py
+OR
+mpirun -np 7 -machinefile ~/mpi_hosts python PySCNN_v22.py
+##################################################################################################
+To see remaining space on disk(human readable):
+df -h
+df -T #to see filesystem type also
+##################################################################################################
+To see a folder size
+du -hs /folder
+##################################################################################################
+To be able to disown a process started on a remote server, install screen
+1. Type screen in the terminal to start a screen
+2. To see how many screens are started type, screen -list
+3. To connect to a screen type, screen -rd screenID
+4. To detach type, crtl+a and ctrl+d
+5. To kill a screen type, ctrl+d
+###################################################################################################
+In order to rename a bunch of files in a directory from name_YYMM.csv to name_YYYYMM.csv
+use:
+ls name* | while read a; do mv $a `echo $a | sed s/name_/name_20/`; done
