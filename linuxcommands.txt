@@ -37,3 +37,10 @@ To be able to disown a process started on a remote server, install screen
 In order to rename a bunch of files in a directory from name_YYMM.csv to name_YYYYMM.csv
 use:
 ls name* | while read a; do mv $a `echo $a | sed s/name_/name_20/`; done
+#####################################################################################################
+To untrack and track a file
+This will tell git you want to start ignoring the changes to the file
+git update-index --assume-unchanged path/to/file
+
+When you want to start keeping track again
+git update-index --no-assume-unchanged path/to/file
