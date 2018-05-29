@@ -44,3 +44,20 @@ git update-index --assume-unchanged path/to/file
 
 When you want to start keeping track again
 git update-index --no-assume-unchanged path/to/file
+
+####################################################################################################
+To see hidden/ignored files or to hide or unhide copy the below lines to ~/home/user/.gitconfig file
+[user]
+    name = username
+    email = username@email.com
+
+[alias]
+  hide = update-index --assume-unchanged
+  unhide = update-index --no-assume-unchanged
+  unhide-all = update-index --really-refresh
+  #hidden = !git ls-files -v | grep \"^[a-z]\"
+  #ignored = !git status -s --ignored | grep \"^!!\"
+
+  hidden = "!f(){ git -C \"$GIT_PREFIX\" ls-files -v \"$@\" | grep \"^[a-z]\";}; f"
+  ignored = "!f(){ git -C \"$GIT_PREFIX\" status -s --ignored \"$@\" | grep \"^!!\";}; f"
+
