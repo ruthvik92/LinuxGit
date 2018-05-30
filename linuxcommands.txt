@@ -2,10 +2,10 @@ To see if HT is enabled:
 dmidecode -t processor | grep -E '(Core Count|Thread Count)' OR lscpu #look for Thread(s) per core
 ##################################################################################################
 To copy files from remote to local:
-scp 132.178.128.229:/home/ruthvik/Desktop/Fullyconnected_Results/default_models/200kImgs/200kweights.eps /home/ruthvik/Desktop
+scp 132.z.y.x:/home/ruthvik/Desktop/Fullyconnected_Results/default_models/200kImgs/200kweights.eps /home/ruthvik/Desktop
 ##################################################################################################
 To copy from local to remote:
-scp /home/ruthvik/Desktop/Focol_Results/Serial_15000_imgs_progress_test_man_12hrs_OFF_roundoff/filters.eps 132.178.128.229:/home/ruthvik/Desktop
+scp /home/ruthvik/Desktop/Focol_Results/Serial_15000_imgs_progress_test_man_12hrs_OFF_roundoff/filters.eps 132.z.y.x:/home/ruthvik/Desktop
 ##################################################################################################
 To connect to remote with username:
 ssh rvuser@bridges.psc.edu -p 2222
