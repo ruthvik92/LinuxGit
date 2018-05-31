@@ -60,4 +60,17 @@ To see hidden/ignored files or to hide or unhide copy the below lines to ~/home/
 
   hidden = "!f(){ git -C \"$GIT_PREFIX\" ls-files -v \"$@\" | grep \"^[a-z]\";}; f"
   ignored = "!f(){ git -C \"$GIT_PREFIX\" status -s --ignored \"$@\" | grep \"^!!\";}; f"
+#################################################################################################
+Create a .vimrc file in /home/user/ with this settings to code in python
+set columns=120
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+set smarttab
+set number
+set paste
+filetype indent on
+filetype on
+filetype plugin on
 
