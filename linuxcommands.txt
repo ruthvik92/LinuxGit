@@ -73,4 +73,10 @@ set paste
 filetype indent on
 filetype on
 filetype plugin on
+#################################################################################################
+Checking File Sizes
 
+ls -l filename /* Size of the file*/
+ls -l *        /* Size of All the files in the current directory */
+ls -al *       /* Size of All the files including hidden files in the current directory */
+ls -al dir/    /* Size of All the files including hidden files in the 'dir' di
