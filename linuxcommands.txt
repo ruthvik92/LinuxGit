@@ -80,3 +80,5 @@ ls -l filename /* Size of the file*/
 ls -l *        /* Size of All the files in the current directory */
 ls -al *       /* Size of All the files including hidden files in the current directory */
 ls -al dir/    /* Size of All the files including hidden files in the 'dir' di
+
+Including -h option in any of the above commands (for Ex: ls -lh * or du -sh) will give you size in human readable format (kb, mb,gb, ...)
