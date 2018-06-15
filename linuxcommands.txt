@@ -82,3 +82,24 @@ ls -al *       /* Size of All the files including hidden files in the current di
 ls -al dir/    /* Size of All the files including hidden files in the 'dir' di
 
 Including -h option in any of the above commands (for Ex: ls -lh * or du -sh) will give you size in human readable format (kb, mb,gb, ...)
+##################################################################################################
+Comment multiple line in Vim:
+1.Ctrl-v
+2. slect number of lines you want by pressing h, j, k and l to move left, down, up, right respectively)
+3.Shift-I
+4. Press '#' and then press Esc. Comments will showup in a moment.
+###################################################################################################
+Delete multiple lines in vim:
+Method 1:
+Press 'Number of lines to be deleted' dd, e:g= 5dd deletes 5 lines below the cursor including the present line.
+
+Method 2: (useful when you dont know how many to delete)
+1.Shift-v (selects whole line)
+2.slect number of lines you want by pressing h, j, k and l to move left, down, up, right respectively)
+3.d
+####################################################################################################
+Set numbers in vim and other misc sets:
+1. :set number (:set nonumber, to remove numbers)
+2. :set paste(doesn't messup indentation when pasting)
+3. :set hls (:set nohls, to remove highlighting of searched words)
+
