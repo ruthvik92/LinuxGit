@@ -106,3 +106,9 @@ Set numbers in vim and other misc sets:
 ######################################################################################################
 change ownership of files on Linux
 sudo chown -R ruthvik spiking-cnns # here user ruthvik will own spiking-cnns
+
+######################################################################################################
+replace a word in vim
+:%s/old_word/new_word/g   -- replace all
+:6,10s/old_word/new_word/g   -- replace line 6 to line 10
+:%s/old_word/new_word/gc   -- replace with confirmaion
