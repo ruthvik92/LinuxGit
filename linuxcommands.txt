@@ -112,3 +112,7 @@ replace a word in vim
 :%s/old_word/new_word/g   -- replace all
 :6,10s/old_word/new_word/g   -- replace line 6 to line 10
 :%s/old_word/new_word/gc   -- replace with confirmaion
+
+#######################################################################################################
+To see which processes are using swap
+smem -s swap -r
