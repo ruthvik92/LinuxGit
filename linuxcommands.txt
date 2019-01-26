@@ -6,6 +6,9 @@ scp 132.z.y.x:/home/ruthvik/Desktop/Fullyconnected_Results/default_models/200kIm
 ##################################################################################################
 To copy from local to remote:
 scp /home/ruthvik/Desktop/Focol_Results/Serial_15000_imgs_progress_test_man_12hrs_OFF_roundoff/filters.eps 132.z.y.x:/home/ruthvik/Desktop
+
+if you have a port number then
+scp -P /home/ruthvik/Desktop/Focol_Results/Serial_15000_imgs_progress_test_man_12hrs_OFF_roundoff/filters.eps 132.z.y.x:/home/ruthvik/Desktop
 ##################################################################################################
 To connect to remote with username:
 ssh rvuser@bridges.psc.edu -p 2222
