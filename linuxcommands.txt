@@ -53,7 +53,6 @@ To see hidden/ignored files or to hide or unhide copy the below lines to ~/home/
 [user]
     name = username
     email = username@email.com
-
 [alias]
   hide = update-index --assume-unchanged
   unhide = update-index --no-assume-unchanged
@@ -119,3 +118,6 @@ replace a word in vim
 #######################################################################################################
 To see which processes are using swap
 smem -s swap -r
+########################################################################################################
+To browse files to be opened in vim
+:e.
