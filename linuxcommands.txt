@@ -29,6 +29,7 @@ df -T #to see filesystem type also
 ##################################################################################################
 To see a folder size
 du -hs /folder
+du -sh -- * # lists sizes of all folders in a directory
 ##################################################################################################
 To be able to disown a process started on a remote server, install screen
 1. Type screen in the terminal to start a screen
