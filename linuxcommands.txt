@@ -128,3 +128,7 @@ sudo lshw -class memory
 ########################################################################################################
 If you have 2 versions of pip and want to use say, pip for python 3 then try:
 sudo python3 -m pip install --user 'packagename'
+#########################################################################################################
+to track only certain type of files in a git folder create a `.gitignore` file with below contents
+*
+!*.c ## .c is the file extension here, it can be.py or .h or any other extension
