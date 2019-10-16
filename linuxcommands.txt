@@ -215,3 +215,51 @@ case "${SORT}" in
 esac
 rm -fR "${TMP}/";
 ##############################################################################################################
+					JUPYTER+VIRTUALENV+TENSORFLOW
+##############################################################################################################
+INSTALL VIRTUAL ENV
+
+$ sudo pip install -U virtualenv  # system-wide install
+
+CREATE A NEW VIRTUAL ENV
+
+$ virtualenv --no-site-packages -p python2.7 ./TF_venv_v1 
+use the above line if you want to create a fresh enviroment which
+
+$ virtualenv --system-site-packages -p python2.7 ./TF_venv_v1
+
+otherwise but this line defeats the purpose of virtual env
+
+INSTALL TENSORFLOW
+
+$ source ./tf_venv_v1/bin/activate
+
+
+$ pip install --upgrade pip
+
+$ pip install --upgrade tensorflow
+
+$ python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+
+
+INSTALL JUPYTER NOTEBOOK
+
+$ pip install jupyter
+
+$ ipython kernel install --user --name=TF_venv_v1
+
+$ jupyter-notebook
+
+#you should be able to toggle the kernel in the jupyter notebook.
+
+Sources:
+https://www.tensorflow.org/install/pip?lang=python2
+https://stackoverflow.com/questions/42449814/running-jupyter-notebook-in-a-virtualenv-installed-sklearn-module-not-available
+(answer by the user C.Feng)
+#######################################################################################################################
+
+
+
+
+
+
