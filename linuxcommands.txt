@@ -263,7 +263,13 @@ smbclient '\\IP\folder' -U domain\\user
 >cd 'directory your file's in'
 >prompt
 >mget filename
+#######################################################################################################################
+MOUNT A WINDOWS SHARE ON NAUTILUS USING GUI
+Enter the below lines in the `Other Locations` tab
+smb://IPaddress/folder/
 
+CD ING INTO A NAUTILUS MOUNTED WINDOWS SHARE
+cd /run/user/USERNAME/gvfs/
 
 
 
