@@ -257,6 +257,12 @@ https://www.tensorflow.org/install/pip?lang=python2
 https://stackoverflow.com/questions/42449814/running-jupyter-notebook-in-a-virtualenv-installed-sklearn-module-not-available
 (answer by the user C.Feng)
 #######################################################################################################################
+ACCESS FILES FROM WINDOWS SHARE ON LINUX
+(https://unix.stackexchange.com/questions/118115/cant-mount-samba-share/118153#118153?newreg=69043e941dee4e9dbcc79a8c90e3adab)
+smbclient '\\IP\folder' -U domain\\user
+>cd 'directory your file's in'
+>prompt
+>mget filename
 
 
 
