@@ -270,8 +270,15 @@ smb://IPaddress/folder/
 
 CD ING INTO A NAUTILUS MOUNTED WINDOWS SHARE
 cd /run/user/USERNAME/gvfs/
-
-
+####################################################################################################################
+TO CHECK THE VERSION OF THE CUDA COMPILER
+$nvcc -version
+TO CHECK THE VERSION OF THE CUDNN
+cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+or
+cat /usr/include/cudnn.h | grep CUDNN_MAJOR -A 2
+TO CHECK THE VERSION OF THE NVIDIA GRAPHICS
+$nvidia-smi AND 
 
 
 
