@@ -279,6 +279,7 @@ or
 cat /usr/include/cudnn.h | grep CUDNN_MAJOR -A 2
 TO CHECK THE VERSION OF THE NVIDIA GRAPHICS
 $nvidia-smi AND 
-
+https://www.tensorflow.org/install/source#tested_build_configurations
+####################################################################################################################
 
 
