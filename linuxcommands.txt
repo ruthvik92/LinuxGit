@@ -20,6 +20,7 @@ sudo openconnect bsuvpn-offcampus.boisestate.edu
 ##################################################################################################
 To run PyNN, Neuron, MPI codes use:
 mpirun -np 4 ~/neuron/nrn/src/nrniv/nrniv -mpi PySCNN_v22.py
+
 OR
 mpirun -np 7 -machinefile ~/mpi_hosts python PySCNN_v22.py
 ##################################################################################################
@@ -64,6 +65,16 @@ To see hidden/ignored files or to hide or unhide copy the below lines to ~/home/
   hidden = "!f(){ git -C \"$GIT_PREFIX\" ls-files -v \"$@\" | grep \"^[a-z]\";}; f"
   ignored = "!f(){ git -C \"$GIT_PREFIX\" status -s --ignored \"$@\" | grep \"^!!\";}; f"
 #################################################################################################
+To create a branch in local git repo and push it to remote
+	git checkout -b 'branch name'
+To check the branch you're working in
+	git branch
+To switch between bracnhes
+	git switch or git checkout 'branch name'
+To push the local branch to remote
+	git push --set-upstream origin optimization
+	 git push origin 'branch name'
+###################################################################################################
 Create a .vimrc file in /home/user/ with this settings to code in python
 set columns=120
 set tabstop=4
