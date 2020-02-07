@@ -299,4 +299,6 @@ TO CONVERT A .IPYNB FILE TO EMBEDDED HTML WITH TOC
 jupyter nbconvert --to html_toc --ExtractOutputPreprocessor.enabled=False FILE
 jupyter nbconvert --to html_toc FILE
 ######################################################################################################################
-
+TO UNSTAGE A FILE THAT IS 'git add'ed
+git reset -- <FILENAME>
+#######################################################################################################################
