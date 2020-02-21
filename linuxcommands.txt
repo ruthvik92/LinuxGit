@@ -302,3 +302,6 @@ jupyter nbconvert --to html_toc FILE
 TO UNSTAGE A FILE THAT IS 'git add'ed
 git reset -- <FILENAME>
 #######################################################################################################################
+LIST FOLDERS THAT CONTAIN MORE THAN 148 FILE
+find . -maxdepth 1 -type d -exec bash -c "echo -ne '{} '; ls '{}' | wc -l" \; |   awk '$NF>=148'
+########################################################################################################################
