@@ -305,3 +305,6 @@ git reset -- <FILENAME>
 LIST FOLDERS THAT CONTAIN MORE THAN 148 FILE
 find . -maxdepth 1 -type d -exec bash -c "echo -ne '{} '; ls '{}' | wc -l" \; |   awk '$NF>=148'
 ########################################################################################################################
+LIST TOP 20 PROCESSES THAT ARE USING UP THE MOST RAM
+ps aux | awk '{print $2, $4, $11}' | sort -k2rn | head -n 20
+#########################################################################################################################
