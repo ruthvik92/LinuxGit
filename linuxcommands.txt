@@ -308,3 +308,27 @@ find . -maxdepth 1 -type d -exec bash -c "echo -ne '{} '; ls '{}' | wc -l" \; | 
 LIST TOP 20 PROCESSES THAT ARE USING UP THE MOST RAM
 ps aux | awk '{print $2, $4, $11}' | sort -k2rn | head -n 20
 #########################################################################################################################
+dpkg-apt-remove-purge-list-commands
+##########################################################################################################################
+# list all the versions of a package in apt
+apt list | grep -i "package"
+
+# list all the package installed locally
+apt list --installed | grep -i "package"
+
+
+# remove a package
+sudo apt purge "package"*
+
+# uninstall a package 
+sudo apt autoremove
+
+# list all the package 
+dpkg-query -l | grep -i cuda
+
+# purge a packge from dpkg
+dpkg-query -l | grep -i "package" | awk '{print $2}' | xargs sudo dpkg --purge
+
+# remove a packge
+sudo dpkg -r "package"
+##########################################################################################################################
