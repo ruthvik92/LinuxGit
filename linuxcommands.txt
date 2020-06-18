@@ -364,3 +364,7 @@ int main() {
 nvcc -o 'main.out' 'main.cu'
 ./main.out
 ############################################################################################################################
+Log the output of terminal to a file and show in the terminal
+https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
+############################################################################################################################
+command | tee -a output.txt
