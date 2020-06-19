@@ -368,3 +368,8 @@ Log the output of terminal to a file and show in the terminal
 https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
 ############################################################################################################################
 command | tee -a output.txt
+######################################################################################################################
+commands to hold a package from upgrading to prevent breaking
+ sudo apt-mark hold 'package name1" "package name2"
+ apt-mark showhold
+ #######################################################################################################################
