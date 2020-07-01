@@ -373,3 +373,8 @@ commands to hold a package from upgrading to prevent breaking
  sudo apt-mark hold 'package name1" "package name2"
  apt-mark showhold
  #######################################################################################################################
+Checkout from a pull request
+https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/checking-out-pull-requests-locally
+git fetch origin pull/ID/head:BRANCHNAME
+git checkout BRANCHNAME
+######################################################################################################################
