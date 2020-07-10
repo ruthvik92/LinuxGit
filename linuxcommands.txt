@@ -378,3 +378,6 @@ https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/ch
 git fetch origin pull/ID/head:BRANCHNAME
 git checkout BRANCHNAME
 ######################################################################################################################
+Check if GPU is detected (without drivers)
+lspci -v | grep "VGA controller"
+#######################################################################################################################
