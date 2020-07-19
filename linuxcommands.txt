@@ -293,7 +293,12 @@ $nvidia-smi AND
 https://www.tensorflow.org/install/source#tested_build_configurations
 ####################################################################################################################
 TO INSTALL NBEXTENSION ON NOTEBOOK
-pip install jupyter_contrib_nbextensions
+https://stackoverflow.com/questions/49647705/jupyter-nbextensions-does-not-appear/50663099
+
+pip install --user jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+jupyter nbextension enable spellchecker/main
+jupyter nbextension enable codefolding/main
 
 TO CONVERT A .IPYNB FILE TO EMBEDDED HTML WITH TOC
 jupyter nbconvert --to html_toc --ExtractOutputPreprocessor.enabled=False FILE
