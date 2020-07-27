@@ -386,3 +386,6 @@ git checkout BRANCHNAME
 Check if GPU is detected (without drivers)
 lspci -v | grep "VGA controller"
 #######################################################################################################################
+Caching a github password
+https://docs.github.com/en/github/using-git/caching-your-github-credentials-in-git
+###########################################################################################################################
