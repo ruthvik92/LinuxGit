@@ -24,9 +24,64 @@ mpirun -np 4 ~/neuron/nrn/src/nrniv/nrniv -mpi PySCNN_v22.py
 OR
 mpirun -np 7 -machinefile ~/mpi_hosts python PySCNN_v22.py
 ##################################################################################################
+###############SOME IMPORTANT THINGS ABOUT RAM/DISK/MEMORY ETC ###################################
 To see remaining space on disk(human readable):
 df -h
 df -T #to see filesystem type also
+###########################################################################################
+To see total available memory (https://www.linuxatemyram.com/)
+free -h
+              total        used        free      shared  buff/cache   available
+Mem:            62G         19G         31G        419M         11G         42G
+Swap:          2.0G        192M        1.8G
+in the above table, free=31 and availabel=42 so your system has cached about 11GB of the disk
+however you don't need to worry that you only have 31G of RAM because you actually have 42G
+and the extra 11G can be freed up on arrival of a new process
+###############################################################################################
+Interpret ps aux command (https://superuser.com/questions/117913/ps-aux-output-meaning/117921#117921)
+
+    USER = user owning the process
+    PID = process ID of the process
+    %CPU = It is the CPU time used divided by the time the process has been running.
+    %MEM = ratio of the process’s resident set size to the physical memory on the machine
+    VSZ = virtual memory usage of entire process (in KiB)
+    RSS = resident set size, the non-swapped physical memory that a task has used (in KiB)
+    TTY = controlling tty (terminal)
+    STAT = multi-character process state
+    START = starting time or date of the process
+    TIME = cumulative CPU time
+    COMMAND = command with all its arguments
+RSS is the actual number that we have to worry about
+RSS is the amount of physical memory this process is using. Note that this includes any memory that's shared with other processes (eg if other processes are loaded from same executable or libraries) so it may over-report memory usage. VSZ is the size of the virtual memory space - do not be mislead by this as it's not all "used" memory. It includes memory in use (RSS), memory that's swapped, but usually the majority is just additional addressing space that hasn't actually had any real memory allocated to it - in order to use that space, more memory would need to be given to the process.
+#################################################################################################
+Parsing the output of ps aux to get memory usage for every process (https://superuser.com/questions/398862/linux-find-out-what-process-is-using-all-the-ram)
+
+ps aux | grep <process name> | awk '{sum=sum+$6}; END {print sum/1024 " MB"}'
+
+ruthvik@ruthvik:~/tros_vision$ ps aux | grep python | awk '{sum=sum+$6}; END {print sum/1024 " MB"}'
+181.309 MB
+ruthvik@ruthvik:~/tros_vision$ ps aux | grep gnome | awk '{sum=sum+$6}; END {print sum/1024 " MB"}'
+13137.7 MB
+ruthvik@ruthvik:~/tros_vision$ ps aux | grep nautilus | awk '{sum=sum+$6}; END {print sum/1024 " MB"}'
+1337.88 MB
+##################################################################################################
+Freeup RAM(page cache) (https://askubuntu.com/questions/78284/is-there-a-command-that-frees-up-ram)
+
+
+To free pagecache:
+
+echo 1 > /proc/sys/vm/drop_caches
+
+To free dentries and inodes:
+
+echo 2 > /proc/sys/vm/drop_caches
+
+To free pagecache, dentries and inodes:
+
+echo 3 > /proc/sys/vm/drop_caches
+
+use with root permissions
+
 ##################################################################################################
 To see a folder size
 du -hs /folder
