@@ -444,3 +444,6 @@ lspci -v | grep "VGA controller"
 Caching a github password
 https://docs.github.com/en/github/using-git/caching-your-github-credentials-in-git
 ###########################################################################################################################
+Check if one git branch is ahead of another
+https://stackoverflow.com/questions/51475525/check-if-a-git-branch-is-ahead-of-another-using-a-script
+git log branch2..branch1
