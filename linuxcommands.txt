@@ -447,3 +447,7 @@ https://docs.github.com/en/github/using-git/caching-your-github-credentials-in-g
 Check if one git branch is ahead of another
 https://stackoverflow.com/questions/51475525/check-if-a-git-branch-is-ahead-of-another-using-a-script
 git log branch2..branch1
+####################################################################################################################
+Rename many files at once
+https://stackoverflow.com/questions/7450818/rename-all-files-in-directory-from-filename-h-to-filename-half
+rename 's/stringtoremove.png/stringtoadd.png/' *.png
