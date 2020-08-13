@@ -159,6 +159,11 @@ Comment multiple line in Vim:
 2. slect number of lines you want by pressing h, j, k and l to move left, down, up, right respectively)
 3.Shift-I
 4. Press '#' and then press Esc. Comments will showup in a moment.
+######################################################################################################
+vim replace a word 
+yw - yanks a word
+vep - replaces a word with previosuly yanked word
+https://unix.stackexchange.com/questions/88714/how-can-i-do-a-change-word-in-vim-using-the-current-paste-buffer
 ###################################################################################################
 Delete multiple lines in vim:
 Method 1:
