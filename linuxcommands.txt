@@ -93,6 +93,8 @@ To be able to disown a process started on a remote server, install screen
 3. To connect to a screen type, screen -rd screenID
 4. To detach type, crtl+a and ctrl+d
 5. To kill a screen type, ctrl+d
+6. To increase vim buffer `Ctrl-a + :`  and then type scrollback 1000
+https://unix.stackexchange.com/questions/351115/increase-buffer-size-while-running-screen
 ###################################################################################################
 In order to rename a bunch of files in a directory from name_YYMM.csv to name_YYYYMM.csv
 use:
@@ -451,3 +453,6 @@ git log branch2..branch1
 Rename many files at once
 https://stackoverflow.com/questions/7450818/rename-all-files-in-directory-from-filename-h-to-filename-half
 rename 's/stringtoremove.png/stringtoadd.png/' *.png
+###################################################################################################################
+
+###################################################################################################################
