@@ -459,5 +459,7 @@ Rename many files at once
 https://stackoverflow.com/questions/7450818/rename-all-files-in-directory-from-filename-h-to-filename-half
 rename 's/stringtoremove.png/stringtoadd.png/' *.png
 ###################################################################################################################
-
+Kill a zomby process taking space in GPU
+sudo fuser -v /dev/nvidia*
+And then use htop to Filter(F4) and Sort (Shift+>) accordingly to kill the process in htop F9. 
 ###################################################################################################################
