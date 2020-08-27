@@ -307,6 +307,7 @@ INSTALL TENSORFLOW
 
 $ source ./tf_venv_v1/bin/activate
 
+# From within the virtual environment. 
 
 $ pip install --upgrade pip
 
@@ -346,6 +347,9 @@ cd /run/user/USERNAME/gvfs/
 ####################################################################################################################
 TO CHECK THE VERSION OF THE CUDA COMPILER
 $nvcc -version
+
+$ cat /usr/local/cuda/version.txt 
+
 TO CHECK THE VERSION OF THE CUDNN
 cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 or
