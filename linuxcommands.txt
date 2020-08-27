@@ -463,3 +463,9 @@ Kill a zomby process taking space in GPU
 sudo fuser -v /dev/nvidia*
 And then use htop to Filter(F4) and Sort (Shift+>) accordingly to kill the process in htop F9. 
 ###################################################################################################################
+list all the folders in a path that starts with a string
+ls -l "path" | grep "^d" | grep "string"
+same for files and fodlers
+
+ls -l "path" | grep "string"
+###############################################################################################################
