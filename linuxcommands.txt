@@ -478,3 +478,7 @@ ls -l "path" | grep "string"
 #from within the same folder
 ls -1 -d */ | grep "string" | cut -f1 -d'/'
 ###############################################################################################################
+vim replace a word
+vep
+https://unix.stackexchange.com/questions/88714/how-can-i-do-a-change-word-in-vim-using-the-current-paste-buffer
+####################################################################################################################
