@@ -479,6 +479,6 @@ ls -l "path" | grep "string"
 ls -1 -d */ | grep "string" | cut -f1 -d'/'
 ###############################################################################################################
 vim replace a word
-vep
+vep or use visual mode and yank the work and then go to the word that needs to deleted and use visual mode again.
 https://unix.stackexchange.com/questions/88714/how-can-i-do-a-change-word-in-vim-using-the-current-paste-buffer
 ####################################################################################################################
