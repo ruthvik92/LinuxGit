@@ -482,3 +482,7 @@ vim replace a word
 vep or use visual mode and yank the work and then go to the word that needs to deleted and use visual mode again.
 https://unix.stackexchange.com/questions/88714/how-can-i-do-a-change-word-in-vim-using-the-current-paste-buffer
 ####################################################################################################################
+Visualize .csv files on terminal
+https://chrisjean.com/view-csv-data-from-the-command-line/
+cat file.csv | sed -e 's/,,/, ,/g' | column -s, -t | less -#5 -N -S
+###########################################################################################################
