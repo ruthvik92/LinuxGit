@@ -486,3 +486,7 @@ Visualize .csv files on terminal
 https://chrisjean.com/view-csv-data-from-the-command-line/
 cat file.csv | sed -e 's/,,/, ,/g' | column -s, -t | less -#5 -N -S
 ###########################################################################################################
+Rename a bunch of files in a folder with zero padding
+https://stackoverflow.com/questions/3211595/renaming-files-in-a-folder-to-sequential-numbers (comment by seweryn)
+ls | cat -n | while read n f; do mv "$f" `printf "%04d.extension" $n`; done
+###########################################################################################################
