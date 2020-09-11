@@ -369,6 +369,11 @@ jupyter nbextension enable codefolding/main
 TO CONVERT A .IPYNB FILE TO EMBEDDED HTML WITH TOC
 jupyter nbconvert --to html_toc --ExtractOutputPreprocessor.enabled=False FILE
 jupyter nbconvert --to html_toc FILE
+
+Or write the below in a jupyter cell
+%%bash
+. ~/.bashrc
+jupyter nbconvert --to html_toc --ExtractOutputPreprocessor.enabled=False depall_Rev02_summary.ipynb
 ######################################################################################################################
 TO UNSTAGE A FILE THAT IS 'git add'ed
 git reset -- <FILENAME>
