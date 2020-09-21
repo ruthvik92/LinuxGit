@@ -495,3 +495,7 @@ Rename a bunch of files in a folder with zero padding
 https://stackoverflow.com/questions/3211595/renaming-files-in-a-folder-to-sequential-numbers (comment by seweryn)
 ls | cat -n | while read n f; do mv "$f" `printf "%04d.extension" $n`; done
 ###########################################################################################################
+Rename bunch of files, replace a section of the name with another
+rename  's/oldname/newname/' *.jpg
+https://unix.stackexchange.com/questions/175135/how-to-rename-multiple-files-by-replacing-string-in-file-name-this-string-conta
+see answer by KrisWebDev
