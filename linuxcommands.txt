@@ -113,14 +113,19 @@ To see hidden/ignored files or to hide or unhide copy the below lines to ~/home/
     name = username
     email = username@email.com
 [alias]
-  hide = update-index --assume-unchanged
-  unhide = update-index --no-assume-unchanged
-  unhide-all = update-index --really-refresh
-  #hidden = !git ls-files -v | grep \"^[a-z]\"
-  #ignored = !git status -s --ignored | grep \"^!!\"
-  parent = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
-  hidden = "!f(){ git -C \"$GIT_PREFIX\" ls-files -v \"$@\" | grep \"^[a-z]\";}; f"
-  ignored = "!f(){ git -C \"$GIT_PREFIX\" status -s --ignored \"$@\" | grep \"^!!\";}; f"
+        hide = update-index --assume-unchanged
+        unhide = update-index --no-assume-unchanged
+        unhide-all = update-index --really-refresh
+        hidden = !git ls-files -v | grep \"^[a-z]\"
+        ignored = !git status -s --ignored | grep \"^!!\"
+        parent = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
+        hidden = "!f(){ git -C \"$GIT_PREFIX\" ls-files -v \"$@\" | grep \"^[a-z]\";}; f"
+        ignored = "!f(){ git -C \"$GIT_PREFIX\" status -s --ignored \"$@\" | grep \"^!!\";}; f"
+        recent-commit = !git log --name-status HEAD^..HEAD
+        stash-unstaged-untracked = !git stash save --keep-index --include-untracked
+        uncommit-unstage = !git reset HEAD^
+        stashed = !git stash list
+
 #################################################################################################
 To create a branch in local git repo and push it to remote
 	git checkout -b 'branch name'
