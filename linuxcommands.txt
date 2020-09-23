@@ -504,3 +504,12 @@ Rename bunch of files, replace a section of the name with another
 rename  's/oldname/newname/' *.jpg
 https://unix.stackexchange.com/questions/175135/how-to-rename-multiple-files-by-replacing-string-in-file-name-this-string-conta
 see answer by KrisWebDev
+#######################################################################################################
+Move files from one recursive folder to another rpeserving the folder structure
+find . -name '*.png' | cpio -pdm ~/tros_vision/src/tros_object_detector/tod_data/tros/ndds_depalletization_rev03/data/
+https://superuser.com/questions/299938/how-can-i-recursively-copy-files-by-file-extension-preserving-directory-structu
+########################################################################################################
+count files in a folder
+ls -1 | wc -l
+https://stackoverflow.com/questions/20895290/count-number-of-files-within-a-directory-in-linux
+###########################################################################################################
