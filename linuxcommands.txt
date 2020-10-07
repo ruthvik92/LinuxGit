@@ -125,7 +125,7 @@ To see hidden/ignored files or to hide or unhide copy the below lines to ~/home/
         stash-unstaged-untracked = !git stash save --keep-index --include-untracked
         uncommit-unstage = !git reset HEAD^
         stashed = !git stash list
-
+	git-ls = ls-tree -r master --name-only
 #################################################################################################
 To create a branch in local git repo and push it to remote
 	git checkout -b 'branch name'
