@@ -309,6 +309,10 @@ $ virtualenv --system-site-packages -p python2.7 ./TF_venv_v1
 otherwise but this line defeats the purpose of virtual env
 
 INSTALL TENSORFLOW
+$ python
+>>> assert tf.test.is_gpu_available()
+>>> assert tf.test.is_built_with_cuda()
+>>> tf.config.list_physical_devices('GPU')
 
 $ source ./tf_venv_v1/bin/activate
 
