@@ -517,3 +517,13 @@ count files in a folder
 ls -1 | wc -l
 https://stackoverflow.com/questions/20895290/count-number-of-files-within-a-directory-in-linux
 ###########################################################################################################
+Fix mixed tabs and spaces
+you can see tabs with first doing this:
+:set list
+then to make it possible to replace tabs then do this:
+:set expandtab
+then
+:retab
+now all tabs have been replaced with spaces you can then go back to normal viewing like this :
+:set nolist
+https://stackoverflow.com/questions/426963/replace-tabs-with-spaces-in-vim
