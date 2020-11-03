@@ -527,3 +527,11 @@ then
 now all tabs have been replaced with spaces you can then go back to normal viewing like this :
 :set nolist
 https://stackoverflow.com/questions/426963/replace-tabs-with-spaces-in-vim
+############################################################################################################
+launch a remote tensorflow graph on a local tensorboard server using sshfs
+
+$ sudo apt install sshfs
+on the local
+$ mkdir temp_mnt
+$ sshfs ruthvik@x.x.x.x:/home/ruthvik/tros_vision/src/tros_object_detector/tod_models/tros/tros-00053-depall_rev05_mask_rcnn_inception_v2 temp_mnt/
+& tensorboard --logdir=/home/username/temp_mnt
