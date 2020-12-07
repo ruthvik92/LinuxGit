@@ -536,3 +536,7 @@ $ mkdir temp_mnt
 $ sshfs ruthvik@x.x.x.x:/home/ruthvik/tros_vision/src/tros_object_detector/tod_models/tros/tros-00053-depall_rev05_mask_rcnn_inception_v2 temp_mnt/
 $ tensorboard --logdir=/home/username/temp_mnt
 $ fusermount -u temp_mnt # will unmount the mounted folder
+############################################################################################################
+Find and delete particular directories recursively starting with a string
+find older_models/ -type d -name "DIR_NAME-*" -exec rm -rf {} +
+##########################################################################################################
