@@ -540,3 +540,6 @@ $ fusermount -u temp_mnt # will unmount the mounted folder
 Find and delete particular directories recursively starting with a string
 find older_models/ -type d -name "DIR_NAME-*" -exec rm -rf {} +
 ##########################################################################################################
+write terminal output to a file:
+command | tee -a output.txt
+https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
