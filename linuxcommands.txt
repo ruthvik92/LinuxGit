@@ -10,6 +10,11 @@ scp /home/ruthvik/Desktop/Focol_Results/Serial_15000_imgs_progress_test_man_12hr
 if you have a port number then
 scp -P /home/ruthvik/Desktop/Focol_Results/Serial_15000_imgs_progress_test_man_12hrs_OFF_roundoff/filters.eps 132.z.y.x:/home/ruthvik/Desktop
 ##################################################################################################
+if filtering file transfer using scp
+
+scp -r $(find /local_machine/path -type f ! \( -name "*.pth" -or -name "*.zip" -or -name ".json" \)) uname@a.b.c.d:/remote_machine/path
+
+#######################################################################################################
 To connect to remote with username:
 ssh rvuser@bridges.psc.edu -p 2222
     "user"@"remote address" -p "port"
