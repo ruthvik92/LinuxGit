@@ -548,3 +548,7 @@ find older_models/ -type d -name "DIR_NAME-*" -exec rm -rf {} +
 write terminal output to a file:
 command | tee -a output.txt
 https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
+##########################################################################################################
+Compress by filtering
+
+tar cfj pack.tar.bz2 $(find /home/user/folder -type f  \( -name "*.py" -or -name "*.c*" \))
