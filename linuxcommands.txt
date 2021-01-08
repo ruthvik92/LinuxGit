@@ -552,3 +552,4 @@ https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
 Compress by filtering
 
 tar cfj pack.tar.bz2 $(find /home/user/folder -type f  \( -name "*.py" -or -name "*.c*" \))
+tar -xvjf pack.tar.bz2 
