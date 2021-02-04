@@ -91,6 +91,7 @@ use with root permissions
 To see a folder size
 du -hs /folder
 du -sh -- * # lists sizes of all folders in a directory
+du -hs -t 1G */ # list files greater than 1gb
 ##################################################################################################
 To be able to disown a process started on a remote server, install screen
 1. Type screen in the terminal to start a screen
