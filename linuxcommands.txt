@@ -555,5 +555,13 @@ Compress by filtering
 tar cfj pack.tar.bz2 $(find /home/user/folder -type f  \( -name "*.py" -or -name "*.c*" \))
 tar -xvjf pack.tar.bz2 
 #########################################################################################################
-vim yank till the end of the parenthesis
+vim yank till the end of the parenthesis/quotes
+https://stackoverflow.com/questions/1061933/how-to-select-between-brackets-or-quotes-or-in-vim (answer by Tim Whitcomb)
 Place your cursor on the first parenthesis, then press v%y or v%d.
+Or simply vi' to copy between quotes and vi) or vi} to copy between branckets
+
+##########################################################################################################
+Vim yank to a register
+https://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers (answer by FModa3)
+"*<number_of_lines>yy at a line to yank and put it in a stack
+"*p to pop the register in another file
