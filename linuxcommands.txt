@@ -565,3 +565,7 @@ Vim yank to a register
 https://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers (answer by FModa3)
 "*<number_of_lines>yy at a line to yank and put it in a stack
 "*p to pop the register in another file
+###########################################################################################################
+Copy contents of one folder to another exlcusing a few things
+
+rsync -av --progress <source dir> <target dir> --exclude <folder name>
