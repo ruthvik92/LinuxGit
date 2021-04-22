@@ -569,3 +569,6 @@ https://stackoverflow.com/questions/1497958/how-do-i-use-vim-registers (answer b
 Copy contents of one folder to another exlcusing a few things
 
 rsync -av --progress <source dir> <target dir> --exclude <folder name>
+###########################################################################################################
+~/.bashrc aliases
+alias lsdir='ls -d */' #for listing only dirs
