@@ -90,8 +90,8 @@ use with root permissions
 ##################################################################################################
 To see a folder size
 du -hs /folder
-du -sh -- * # lists sizes of all folders in a directory
-du -hs -t 1G */ # list files greater than 1gb
+du -sh -- * or du -hs * # lists sizes of all folders and files in a directory
+du -hs -t 1G */ # list folders greater than 1gb
 ##################################################################################################
 To be able to disown a process started on a remote server, install screen
 1. Type screen in the terminal to start a screen
@@ -572,3 +572,5 @@ rsync -av --progress <source dir> <target dir> --exclude <folder name>
 ###########################################################################################################
 ~/.bashrc aliases
 alias lsdir='ls -d */' #for listing only dirs
+alias dirsizes='du -hs */'
+alias dirfilesizes='du -hs *'
