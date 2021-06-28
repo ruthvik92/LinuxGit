@@ -574,6 +574,8 @@ rsync -av --progress <source dir> <target dir> --exclude <folder name>
 alias lsdir='ls -d */' #for listing only dirs
 alias dirsizes='du -hs */'
 alias dirfilesizes='du -hs *'
+alias zip_all_dirs='for i in */; do zip -r "${i%/}.zip" "$i"; done'
+alias zip_all_dirs_mp='for i in */; do zip -0 -r "${i%/}.zip" "$i" & done; wait'
 PROMPT_DIRTRIM=2
 ###########################################################################################################
 Fix NTFS moutning issues on linux
