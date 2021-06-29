@@ -580,3 +580,7 @@ PROMPT_DIRTRIM=2
 ###########################################################################################################
 Fix NTFS moutning issues on linux
 sudo ntfsfix /dev/sdb1
+############################################################################################################
+Nautilus mounting remote drives
+https://help.ubuntu.com/stable/ubuntu-help/nautilus-connect.html.en
+ssh://username@servername.example.com/folder
