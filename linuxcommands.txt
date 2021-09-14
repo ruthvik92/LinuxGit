@@ -585,3 +585,6 @@ sudo ntfsfix /dev/sdb1
 Nautilus mounting remote drives
 https://help.ubuntu.com/stable/ubuntu-help/nautilus-connect.html.en
 ssh://username@servername.example.com/folder
+############################################################################################################
+Find dead links and print where they are pointing
+for i in $(find . -xtype l); do      ll "$i"; done &>> temp_index.txt
