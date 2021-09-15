@@ -588,3 +588,7 @@ ssh://username@servername.example.com/folder
 ############################################################################################################
 Find dead symlinks and print where they are pointing
 for i in $(find . -xtype l); do      ll "$i"; done &>> temp_index.txt
+############################################################################################################
+Use multiple cores for taring (compression)
+tar -cv --use-compress-program=zstdmt -f tar.file dir_to_zip 
+############################################################################################################
