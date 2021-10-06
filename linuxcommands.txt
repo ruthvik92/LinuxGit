@@ -592,3 +592,22 @@ for i in $(find . -xtype l); do      ll "$i"; done &>> temp_index.txt
 Use multiple cores for taring (compression)
 tar -cv --use-compress-program=zstdmt -f tar.file dir_to_zip 
 ############################################################################################################
+Setup a jupyter on remote
+
+ON REMOTE:
+function jpt(){
+    # Fires-up a Jupyter notebook by supplying a specific port
+    jupyter notebook --no-browser --port=$1
+}
+
+ON LOCAL:
+function jptt(){
+    # Forwards port $1 into port $2 and listens to it
+    ssh -N -f -L localhost:$1:localhost:$2 $3@$4
+}
+$1 is the local port, $2 is the remote port, $3 is the remote_user_name, and $4 is the remote_address
+
+function kill_port(){
+    sudo netstat -lpn | grep :$1
+}
+############################################################################################################
