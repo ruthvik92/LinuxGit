@@ -573,8 +573,9 @@ rsync -av --progress <source dir> <target dir> --exclude '*.ext'
 ###########################################################################################################
 ~/.bashrc aliases
 alias lsdir='ls -d */' #for listing only dirs
-alias dirsizes='du -hs */'
-alias dirfilesizes='du -hs *'
+alias dirsizes='du -hsc */'
+alias dirfilesizes='du -hsc *'
+alias dirfilesizesall='du -sch .[!.]* * |sort -h'
 alias zip_all_dirs='for i in */; do zip -r "${i%/}.zip" "$i"; done'
 alias zip_all_dirs_mp='for i in */; do zip -0 -r "${i%/}.zip" "$i" & done; wait'
 PROMPT_DIRTRIM=2
@@ -611,3 +612,7 @@ function kill_port(){
     sudo netstat -lpn | grep :$1
 }
 ############################################################################################################
+Show sizes of all the files and folders in a directory (including hidden)
+https://askubuntu.com/questions/356902/why-doesnt-this-show-the-hidden-files-folders
+du -sch .[!.]* * |sort -h
+#############################################################################################################
