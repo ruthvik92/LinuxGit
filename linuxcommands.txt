@@ -622,3 +622,7 @@ move_to_trash () {
     mv "$@" ~/.trash
 }
 #############################################################################################################
+https://askubuntu.com/questions/958355/any-app-on-ubuntu-to-open-and-or-convert-heif-pictures-heic-high-efficiency-i
+Convert HEIC images to JPEGS
+sudo apt-get install libheif-examples
+for file in *.heic; do heif-convert $file ${file/%.heic/.jpg}; done
