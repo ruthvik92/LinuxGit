@@ -619,7 +619,7 @@ du -sch .[!.]* * |sort -h
 Move to trash
 https://unix.stackexchange.com/questions/42757/make-rm-move-to-trash/42775
 move_to_trash () {
-    mv "$@" ~/.trash
+    mv "$@" ~/.local/share/Trash/files/
 }
 #############################################################################################################
 https://askubuntu.com/questions/958355/any-app-on-ubuntu-to-open-and-or-convert-heif-pictures-heic-high-efficiency-i
