@@ -486,6 +486,8 @@ rename 's/stringtoremove.png/stringtoadd.png/' *.png
 Kill a zomby process taking space in GPU
 sudo fuser -v /dev/nvidia*
 And then use htop to Filter(F4) and Sort (Shift+>) accordingly to kill the process in htop F9. 
+sudo fuser -v /dev/nvidia* 2>&1 | grep -v Xorg | awk '{for (i=1; i<=NF; i++) if ($i ~ /^[0-9]+$/) print $i}' | sort -u | xargs -r sudo kill -9
+
 ###################################################################################################################
 list all the folders in a path that starts with a string
 ls -l "path" | grep "^d" | grep "string"
